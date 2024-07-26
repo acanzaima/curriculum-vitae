@@ -1,0 +1,185 @@
+:root {
+  --starry-sky-name: #647eff;
+  --starry-sky-text-light: #42d392;
+  --starry-sky-text-light-opacity: #42d39255;
+  --starry-sky-text-light-mix: #325c6b;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: PingFang SC, Microsoft YaHei;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.resume-page {
+  position: relative;
+  margin: auto;
+  max-width: 794px;
+  padding: 15px 20px;
+}
+
+.resume-page.first {
+  padding-bottom: 0;
+}
+
+.resume-page.second {
+  padding-top: 0;
+  margin-top: -15px;
+}
+
+/* 基础信息 */
+.base-info .my-name {
+  display: inline-block;
+  margin: 0 0 5px;
+  letter-spacing: 2px;
+  font-size: 23px;
+  background: -webkit-linear-gradient(315deg, var(--starry-sky-name), var(--starry-sky-text-light));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.base-info .img-my-name {
+  width: 75px;
+}
+
+.base-info .sub-title {
+  display: inline-block;
+  margin-bottom: 4px;
+  vertical-align: bottom;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.info-wrapper.first {
+  margin-top: 5px;
+}
+
+.info-wrapper .info-item {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info-item .mix-text {
+  min-width: fit-content;
+  min-width: -moz-fit-content;
+}
+
+.info-item a {
+  color: var(--starry-sky-text-light);
+  text-decoration: none;
+}
+
+.info-item svg {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  fill: var(--starry-sky-text-light);
+}
+
+/* 重复信息块 */
+.block-content {
+  width: 95%;
+  margin-bottom: 10px;
+}
+
+.line-height-15 {
+  line-height: 1.5;
+}
+
+.info-block .block-title {
+  margin: 10px 0;
+  padding: 0 10px;
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--starry-sky-text-light);
+  border-left: 5px solid var(--starry-sky-text-light);
+  background: linear-gradient(90deg, var(--starry-sky-text-light-opacity), transparent);
+}
+.info-block .list-wrapper {
+  padding-left: 20px;
+}
+.mix-text {
+  color: var(--starry-sky-text-light-mix);
+}
+.font-15 {
+  font-size: 15px;
+}
+/* 工作/项目经验块 */
+.work-experience {
+  margin-top: 7px;
+  margin-bottom: 0;
+}
+.exp-block {
+  margin-bottom: 20px;
+}
+
+.exp-block .exp-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.exp-head .exp-company {
+  font-size: 16px;
+}
+
+/* 项目经验块 */
+.project-block {
+  margin-bottom: 10px;
+}
+
+.project-block .project-name {
+  font-size: 13px;
+  margin: 10px 0 5px 16px;
+}
+.project-block .project-info-item {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 3px 0 3px 29px;
+  display: flex;
+}
+.project-info-item .info-label {
+  font-weight: 700;
+  min-width: fit-content;
+}
+
+.project-info-item .info-content.ul-list {
+  margin: 0;
+  padding-left: 15px;
+}
+
+/* PC下按照 A4 大小设置 */
+@media screen and (min-width: 768px) {
+  .resume-page {
+    height: 1123px;
+  }
+  .resume-page.first {
+    padding: 15px 20px;
+  }
+  .resume-page.second {
+    padding: 15px 20px;
+    margin-top: 0;
+  }
+}
