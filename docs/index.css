@@ -20,6 +20,11 @@ p {
   margin: 0;
 }
 
+li,
+.break-word {
+  overflow-wrap: break-word;
+}
+
 .resume-page {
   position: relative;
   margin: auto;
@@ -181,5 +186,24 @@ p {
   .resume-page.second {
     padding: 15px 20px;
     margin-top: 0;
+  }
+}
+
+/* 设置 mobile 样式 */
+@media screen and (max-width: 767px) {
+  .m-text-ellipsis {
+    position: relative;
+    min-width: initial !important;
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--starry-sky-text-light);
+    text-overflow: ellipsis;
+  }
+  .project-block {
+    border-bottom: 1px solid var(--starry-sky-text-light);
+  }
+  .project-block.no-border {
+    border-bottom: none;
   }
 }
